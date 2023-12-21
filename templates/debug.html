@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}DEBUG{% endblock %}
+{% block content %}
+    <h1>Debug {{num}}</h1>
+    <p>{{count_questions[num]}}</p>
+    <form action="/debug/{{num+1}}" method="POST">
+        <input type ="submit" name="click">
+    </form>
+{% endblock %}

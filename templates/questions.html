@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Survey Questions{% endblock %}
+{% block content %}
+    <h1>Survey Question #{{num+1}}</h1>
+    <h2>{{questions[num].question}}</h2>
+        <form action="/questions/{{num+1}}" method="POST">
+            <input type ="submit" name="input" value="{{questions[num].choices[0]}}" />
+            <input type ="submit" name="input" value="{{questions[num].choices[1]}}" />
+        </form>
+{% endblock %}
